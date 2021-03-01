@@ -1,0 +1,12 @@
+{
+  "name": "app-hoimetruyen",
+  "displayName": "app-hoimetruyen",
+  "expo": {
+    "name": "app-hoimetruyen",
+    "slug": "app-hoimetruyen",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
