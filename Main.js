@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { Text, View } from 'react-native';
-import { Icon, SearchBar, TabBar } from '@ant-design/react-native';
+import { Icon, TabBar } from '@ant-design/react-native';
 import { FontAwesome } from '@expo/vector-icons';
-
+import Home from './Home';
 export default function Main() {
   const [selectedTab, setSelectedTab] = useState('redTab');
 
   const renderContent = (pageText) => {
     return (
       <View style={{ flex: 1, alignItems: 'center', backgroundColor: 'white' }}>
-        <SearchBar placeholder="Search" showCancelButton />
         <Text style={{ margin: 50 }}>{pageText}</Text>
       </View>
     );
@@ -30,7 +29,7 @@ export default function Main() {
         selected={selectedTab === 'home'}
         onPress={() => onChangeTab('home')}
       >
-        {renderContent('Home Tab')}
+        <Home />
       </TabBar.Item>
       <TabBar.Item
         icon={<FontAwesome name="commenting" size={22} />}
